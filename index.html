@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>goit-js-hw-03</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <section class="container">
+      <h2 class="title">Задание 1</h2>
+      <p>
+        Напиши скрипт, который, для объекта user, последовательно:
+      </p>
+      <p>
+        добавляет поле mood со значением 'happy'
+      </p>
+      <p>
+        заменяет значение hobby на 'skydiving'
+      </p>
+      <p>
+        заменяет значение premium на false
+      </p>
+      <p>
+        выводит содержимое объекта user в формате ключ:значение используя
+        Object.keys() и for...of
+      </p>
+      <p>
+        const user = { name: 'Mango', age: 20, hobby: 'html', premium: true, };
+      </p>
+    </section>
+
+    <section class="container">
+      <h2 class="title">Задание 2</h2>
+      <p>
+        Напиши функцию countProps(obj), считающую кол-во свойств в объекте.
+        Функция возвращает число - количество свойств.
+      </p>
+      <p>
+        const countProps = function(obj) { // твой код };
+      </p>
+      <p>
+        /* * Вызовы функции для проверки работоспособности твоей реализации. */
+      </p>
+      <p>
+        console.log(countProps({})); // 0
+      </p>
+      <p>
+        console.log(countProps({ name: 'Mango', age: 2 })); // 2
+      </p>
+      <p>
+        console.log(countProps({ mail: 'poly@mail.com', isOnline: true, score:
+        500 })); // 3
+      </p>
+    </section>
+
+    <section class="container">
+      <h2 class="title">Задание 3</h2>
+      <p>
+        Напиши функцию findBestEmployee(employees), которая принимает объект
+        сотрудников и возвращает имя самого продуктивного (который выполнил
+        больше всех задач). Сотрудники и кол-во выполненых задач содержатся как
+        свойства объекта в формате "имя":"кол-во задач".
+      </p>
+      <p>
+        const findBestEmployee = function(employees) { // твой код };
+      </p>
+      <p>
+        /* * Вызовы функции для проверки работоспособности твоей реализации. */
+      </p>
+      <p>
+        console.log( findBestEmployee({ ann: 29, david: 35, helen: 1, lorence:
+        99, }), ); // lorence
+      </p>
+      <p>
+        console.log( findBestEmployee({ poly: 12, mango: 17, ajax: 4, }), ); //
+        mango
+      </p>
+      <p>
+        console.log( findBestEmployee({ lux: 147, david: 21, kiwi: 19, chelsy:
+        38, }), ); // lux
+      </p>
+    </section>
+
+    <section class="container">
+      <h2 class="title">Задание 4</h2>
+      <p>
+        Напиши функцию countTotalSalary(employees) принимающую объект зарплат.
+        Функция считает общую сумму запрплаты работников и возращает ее. Каждое
+        поле объекта, передаваемого в функцию, имеет вид "имя":"зарплата".
+      </p>
+      <p>
+        const countTotalSalary = function(employees) { // твой код };
+      </p>
+      <p>
+        /* * Вызовы функции для проверки работоспособности твоей реализации. */
+      </p>
+      <p>
+        console.log(countTotalSalary({})); // 0
+      </p>
+      <p>
+        console.log( countTotalSalary({ mango: 100, poly: 150, alfred: 80, }),
+        ); // 330
+      </p>
+      <p>
+        console.log( countTotalSalary({ kiwi: 200, lux: 50, chelsy: 150, }), );
+        // 400
+      </p>
+    </section>
+
+    <section class="container">
+      <h2 class="title">Задание 5</h2>
+      <p>
+        Напиши функцию getAllPropValues(arr, prop), которая получает массив
+        объектов и имя свойства. Возвращает массив значений определенного
+        свойства prop из каждого объекта в массиве.
+      </p>
+      <p>
+        const products = [ { name: 'Радар', price: 1300, quantity: 4 }, { name:
+        'Сканер', price: 2700, quantity: 3 }, { name: 'Дроид', price: 400,
+        quantity: 7 }, { name: 'Захват', price: 1200, quantity: 2 }, ];
+      </p>
+      <p>
+        const getAllPropValues = function(arr, prop) { // твой код };
+      </p>
+      <p>
+        /* * Вызовы функции для проверки работоспособности твоей реализации. */
+      </p>
+      <p>
+        console.log(getAllPropValues(products, 'name')); // ['Радар', 'Сканер',
+        'Дроид', 'Захват']
+      </p>
+      <p>
+        console.log(getAllPropValues(products, 'quantity')); // [4, 3, 7, 2]
+      </p>
+      <p>console.log(getAllPropValues(products, 'category')); // []</p>
+    </section>
+
+    <section class="container">
+      <h2 class="title">Задание 6</h2>
+      <p>
+        Напиши функцию calculateTotalPrice(allProdcuts, productName), которая
+        получает массив объектов и имя продукта (значение свойства name).
+        Возвращает общую стоимость продукта (цена * количество).
+      </p>
+      <p>
+        Вызовы функции для проверки работоспособности твоей реализации.
+      </p>
+      <p>
+        const products = [ { name: 'Радар', price: 1300, quantity: 4 }, { name:
+        'Сканер', price: 2700, quantity: 3 }, { name: 'Дроид', price: 400,
+        quantity: 7 }, { name: 'Захват', price: 1200, quantity: 2 }, ];
+      </p>
+      <p>
+        const calculateTotalPrice = function(allProdcuts, productName) { // твой
+        код };
+      </p>
+      <p>
+        /* * Вызовы функции для проверки работоспособности твоей реализации. */
+      </p>
+      <p>console.log(calculateTotalPrice(products, 'Радар')); // 5200</p>
+      <p>console.log(calculateTotalPrice(products, 'Дроид')); // 2800</p>
+    </section>
+
+    <section class="container">
+      <h2 class="title">Задание 7</h2>
+      <p>
+        Напиши скрипт управления личным кабинетом интернет банка. Есть объект
+        account в котором необходимо реализовать методы для работы с балансом и
+        историей транзакций.
+      </p>
+      <p>
+        /* * Типов транзацкий всего два. * Можно положить либо снять деньги со
+        счета. */
+      </p>
+      <p>
+        const Transaction = { DEPOSIT: 'deposit', WITHDRAW: 'withdraw', };
+      </p>
+      <p>
+        /* * Каждая транзакция это объект со свойствами: id, type и amount */
+      </p>
+      <p>
+        const account = { // Текущий баланс счета balance: 0, // История
+        транзакций transactions: [],
+      </p>
+      <p>
+        /* * Метод создает и возвращает объект транзакции. * Принимает сумму и
+        тип транзакции. */ createTransaction(amount, type) {},
+      </p>
+      <p>
+        /* * Метод отвечающий за добавление суммы к балансу. * Принимает сумму
+        танзакции. * Вызывает createTransaction для создания объекта транзакции
+        * после чего добавляет его в историю транзакций */ deposit(amount) {},
+      </p>
+      <p>
+        /* * Метод отвечающий за снятие суммы с баланса. * Принимает сумму
+        танзакции. * Вызывает createTransaction для создания объекта транзакции
+        * после чего добавляет его в историю транзакций. * * Если amount больше
+        чем текущий баланс, выводи сообщение * о том, что снятие такой суммы не
+        возможно, недостаточно средств. */ withdraw(amount) {},
+      </p>
+      <p>
+        /* * Метод возвращает текущий баланс */ getBalance() {},
+      </p>
+      <p>
+        /* * Метод ищет и возвращает объект транзации по id */
+        getTransactionDetails(id) {},
+      </p>
+      <p>
+        /* * Метод возвращает количество средств * определенного типа транзакции
+        из всей истории транзакций */ getTransactionTotal(type) {}, };
+      </p>
+    </section>
+
+    <script type="module" src="./js/task-1.js"></script>
+    <script type="module" src="./js/task-2.js"></script>
+    <script type="module" src="./js/task-3.js"></script>
+    <script type="module" src="./js/task-4.js"></script>
+    <script type="module" src="./js/task-5.js"></script>
+    <script type="module" src="./js/task-6.js"></script>
+    <script type="module" src="./js/task-7.js"></script>
+  </body>
+</html>
