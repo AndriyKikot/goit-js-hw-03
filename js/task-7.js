@@ -79,10 +79,9 @@ const account = {
     getTransactionDetails(id) {
         for (const transaction of this.transactions) {
             if (transaction.id === id) {
-                console.log(transaction);
+                return console.log(transaction);
             }
         }
-        return this.transaction;
     },
 
     /*
@@ -90,14 +89,16 @@ const account = {
      * определенного типа транзакции из всей истории транзакций
      */
     getTransactionTotal(type) {
+        let totalAmount = 0;
+
         for (const transaction of this.transactions) {
             if (transaction.type === type) {
                 console.log(transaction);
+                totalAmount += transaction.amount;
             }
         }
-        return this.transaction;
+        return console.log(totalAmount);
     },
-
 };
 
 

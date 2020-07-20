@@ -19,10 +19,9 @@ const calculateTotalPrice = function (allProdcuts, productName) {
 
     for (const product of allProdcuts) {
         if (product.name === productName) {
-            totalPrice = product.price * product.quantity;
+            return totalPrice = product.price * product.quantity;
         }
     }
-    return totalPrice;
 };
 
 /*
